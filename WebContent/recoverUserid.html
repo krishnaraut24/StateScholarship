@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="style.css">
+<title>Recover User Id</title>
+</head>
+<body>
+<!-- Below is the code for recovery user id page -->
+	<div align="center">
+		<h3>To Get Your User Id...Answer the Following Question</h3>
+		<!-- By submitting data will be handled by recoverUseridProcess.jsp page -->
+		<form action="recoverUseridProcess.jsp" method="post">
+			Secret Question:<select name="question" id="question" required>
+				<option value="what is your nick name?">what is your nick
+					name?</option>
+				<option value="who is your fav player?">who is your fav
+					player?</option>
+				<option value="what is your fav place?">what is your fav
+					place?</option>
+			</select><br>
+			<br> E-Mail: <input type="text" name="email"
+				placeholder="Enter your Email" required /><br>
+			<br> <input type="submit" value="Submit" class="actionBtn"/>
+		</form>
+	</div>
+	<button class="actionBtn" style="float:right;position: absolute;top: 8px;right: 16px;" 
+	onclick="location.href = 'login.html';">Login Page</button> 
+</body>
+</html>

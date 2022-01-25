@@ -1,0 +1,65 @@
+create database state
+
+use state;
+
+create table users(
+    first_name varchar(50) not null,
+    last_name varchar(50) not null,
+    dob varchar(30) not null,
+    gender varchar(50) not null,
+    contact_number varchar(100) not null,
+    email varchar(50) not null,
+    user_category varchar(50) not null,
+    userid varchar(50) not null,
+    password varchar(50) not null,
+    favquestion varchar(100),
+    primary key(userid))
+    
+    
+create table details(
+       requestid int  AUTO_INCREMENT PRIMARY KEY,
+       marks varchar(20) not null,
+       grade varchar(10) not null,
+       course varchar(10) not null,
+       college varchar(30) not null,
+       status varchar(10) DEFAULT 'pending',
+       userid varchar(10) not null,
+       applied varchar(10) DEFAULT 'no',
+       applied_for varchar(10) DEFAULT 'null',
+       finalstatus varchar(10) DEFAULT 'pending') 
+       
+        
+ALTER TABLE details AUTO_INCREMENT=101;
+
+
+create table institution(
+    iname varchar(50) not null,
+    iaddress varchar(50) not null,
+    coursesoffered varchar(30) not null,
+    scholoffered varchar(50) not null,
+    institutionid varchar(100) not null,
+    password varchar(50) not null,
+    category varchar(50) not null,
+    primary key(institutionid))
+    
+
+ create table ticket(
+     reqid int  AUTO_INCREMENT PRIMARY KEY,
+     issue varchar(20) not null,
+     description varchar(50) not null,
+     dateofticket datetime default now(),
+     status varchar(10) DEFAULT 'pending',
+     raised_by varchar(10) not null)
+     
+
+ create table admin(
+     adminid varchar(20) primary key,
+     password varchar(20) not null )
+     
+insert into admin values('krishna','12345');
+
+
+create table scholarshipdetails(
+       scholid varchar(20) PRIMARY KEY,
+       scholdetails varchar(20) not null,
+       merit varchar(10) not null ) 
